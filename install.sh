@@ -1,6 +1,6 @@
 sudo apt update && sudo apt install -y tmux qtcreator qtbase5-dev libqt5serialport5-dev qtmultimedia5-dev libqt5gamepad5-dev libunwind-dev libqt5serialport5-dev git build-essential cmake python3-colcon-common-extensions
-mkdir ~/Sunrise
-cd ~/Sunrise
+mkdir Sunrise
+cd Sunrise
 
 mkdir carla
 cd carla
@@ -18,15 +18,15 @@ rosdep install -i --from-path src --rosdistro humble -r -y
 pip3 install -r src/carla-ros-bridge/requirements.txt
 colcon build --symlink-install --packages-skip rviz_carla_plugin carla_ad_demo pcl_recorder
 source ./install/local_setup.bash
-
+cd ..
 # waywiser
 #
 
 #wget https://github.com/mavlink/MAVSDK/releases/download/v2.0.0/libmavsdk-dev_2.0.0_ubuntu22.04_amd64.deb
 #sudo dpkg -i libmavsdk-dev*.deb
 
-mkdir -p ~/waywiser/src
-cd ~/waywiser/src
+mkdir -p waywiser/src
+cd waywiser/src
 git clone --recurse-submodules git@github.com:RISE-Dependable-Transport-Systems/WayWiseR.git
 cd ..
 rosdep install -i --from-path src --rosdistro humble -r -y
@@ -41,3 +41,7 @@ cd ControlTower
 mkdir build && cd build
 cmake ..
 cmake --build . --parallel
+cd ..
+cd ..
+
+cp setup.sh Sunrise/
