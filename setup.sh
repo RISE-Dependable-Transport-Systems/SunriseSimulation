@@ -14,10 +14,10 @@ if [ $? != 0 ]; then
   # Create a new tmux session
   #
   export MAIN_FOLDER=$PWD
-  export CARLA_ROOT=$MAIN_FOLDER/carla_fromSrc
+  export CARLA_ROOT=$MAIN_FOLDER/carla
   export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla/dist/carla-0.9.15-py3.10-linux-x86_64.egg:$CARLA_ROOT/PythonAPI/carla
 
-  cd $MAIN_FOLDER/carla_ros_bridge/
+  cd $MAIN_FOLDER/carla-ros-bridge/
   source install/setup.zsh
   cd $MAIN_FOLDER/waywiser
   source install/setup.zsh
