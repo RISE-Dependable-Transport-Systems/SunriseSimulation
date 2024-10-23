@@ -8,7 +8,7 @@ sudo dpkg -i libmavsdk-dev*.deb
 ```
 
 
-Apart from this, Carla is not installed by default download the (tar file)[https://risecloud.sharepoint.com/:u:/r/sites/31c3dedd53324aadaf4e5fc493ad5e0f/Delade%20dokument/General/RISE%20SubUC%204.1/Simulations/CARLA_0.9.15-237-gd6f23ed84-dirty.tar.gz?csf=1&web=1&e=8js4qh] into the Carla folder and extract it there. 
+Apart from this, Carla is not installed by default download the [tar file](https://risecloud.sharepoint.com/:u:/r/sites/31c3dedd53324aadaf4e5fc493ad5e0f/Delade%20dokument/General/RISE%20SubUC%204.1/Simulations/CARLA_0.9.15-237-gd6f23ed84-dirty.tar.gz?csf=1&web=1&e=8js4qh) into the Carla folder and extract it there. 
 
 
 To run the complete setup use the setup.sh script which should start all the required systems to get the truck to work. 
