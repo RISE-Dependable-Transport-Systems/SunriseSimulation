@@ -1,0 +1,27 @@
+From 42fabb96339b628b08a1c1087d2d8c0e98f17cdc Mon Sep 17 00:00:00 2001
+From: Ashfaq Farooqui <ashfaq@ashfaqfarooqui.me>
+Date: Wed, 23 Oct 2024 15:16:09 +0200
+Subject: [PATCH] updating for simumation
+
+---
+ mainwindow.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/mainwindow.cpp b/mainwindow.cpp
+index 148360a..77098f0 100644
+--- a/mainwindow.cpp
++++ b/mainwindow.cpp
+@@ -32,8 +32,8 @@ MainWindow::MainWindow(QWidget *parent)
+     ui->mapWidget->addMapModule(ui->traceUI->getTraceModule());
+     ui->mapWidget->addMapModule(ui->flyUI->getGotoClickOnMapModule());
+     ui->mapWidget->addMapModule(ui->cameraGimbalUI->getSetRoiByClickOnMapModule());
+-    ui->mapWidget->setTileServerUrl("http://c.osm.rrze.fau.de/osmhd"); // Also https
+-    // ui->mapWidget->setTileServerUrl("http://127.0.0.1:8080"); // with a local tile server for simulator use case
++    // ui->mapWidget->setTileServerUrl("http://c.osm.rrze.fau.de/osmhd"); // Also https
++    ui->mapWidget->setTileServerUrl("http://127.0.0.1:8080"); // with a local tile server for simulator use case
+     ui->driveTab->setDisabled(true);
+     ui->flyTab->setDisabled(true);
+ 
+-- 
+2.34.1
+
