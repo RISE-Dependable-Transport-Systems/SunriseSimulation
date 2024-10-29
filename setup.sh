@@ -17,9 +17,15 @@ if [ $? != 0 ]; then
   export CARLA_ROOT=$MAIN_FOLDER/carla
   export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla/dist/carla-0.9.15-py3.10-linux-x86_64.egg:$CARLA_ROOT/PythonAPI/carla
 
+
+  # Complile both and source 
+  #
+
   cd $MAIN_FOLDER/carla-ros-bridge/
+  colcon build --symlink-install --packages-skip rviz_carla_plugin carla_ad_demo pcl_recorder
   source install/setup.zsh
   cd $MAIN_FOLDER/waywiser
+  colcon build
   source install/setup.zsh
 
   cd $MAIN_FOLDER
