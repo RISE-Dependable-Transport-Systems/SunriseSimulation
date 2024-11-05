@@ -13,4 +13,4 @@ sudo dpkg -i libmavsdk-dev*.deb
 I also assume that ROS2 is installed on the system correctly and the correct files are sourced according to [the ROS installation steps.](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html#install-ros-2-packages) Futhermore, these scripts are written for ZSH so you might need to tweak a thing here and there if you use bash. 
 
 
-To run the complete setup use the setup.sh script which should start all the required systems to get the truck to work. 
+Once the install script has run a new folder with the name "Sunrise" is created one level above the current directory. To run the setup run the run script in the "Sunrise" directory. It might take couple of minutes to generate the maps for the control tower on the first run.
