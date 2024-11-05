@@ -6,8 +6,10 @@ cd ../Sunrise
 
 mkdir carla
 cd carla
-# wget carla/.tar
-# tar -xvf carla/0.9..
+wget https://risecloud-my.sharepoint.com/:u:/r/personal/ashfaq_farooqui_ri_se/Documents/Sunrise-iccs/CARLA_0.9.15.2-dirty.tar.gz?csf=1 &
+web=1 &
+e=c7zFzB
+tar -xvf CARLA?0.9.15.2-dirty.tar.gz
 cd ..
 
 # carla-ros-bridge
