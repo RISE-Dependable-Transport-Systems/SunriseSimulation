@@ -63,4 +63,6 @@ if [ $? != 0 ]; then
   tmux send-keys -t $SESSION_NAME "ros2 topic pub --once /emergency_stop/target_state waywiser_twist_safety/msg/EmergencyStopState \"{sender_id : 'command_line' , state : 1}\"" C-m
   tmux attach-session -t carla_sunrise 
 
+else
+  echo "Tmux already running. Kill tmux: \"tmux kill-server\""
 fi
