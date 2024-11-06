@@ -23,10 +23,10 @@ if [ $? != 0 ]; then
 
   cd $MAIN_FOLDER/carla-ros-bridge/
   colcon build --symlink-install --packages-skip rviz_carla_plugin carla_ad_demo pcl_recorder
-  source install/setup.zsh
+  source install/setup.sh
   cd $MAIN_FOLDER/waywiser
   colcon build
-  source install/setup.zsh
+  source install/setup.sh
 
   cd $MAIN_FOLDER
   tmux new -d -s $SESSION_NAME
@@ -60,7 +60,9 @@ if [ $? != 0 ]; then
   tmux send-keys -t $SESSION_NAME "ros2 launch waywiser_twist_safety twist_safety.launch.py use_sim_time:=true" C-m
 
   tmux split-window -h -t $SESSION_NAME
-  tmux send-keys -t $SESSION_NAME "ros2 topic pub --once /emergency_stop/target_state waywiser_twist_safety/msg/EmergencyStopState \"{sender_id : 'command_line' , state : 1}\"" C-m
+  #tmux send-keys -t $SESSION_NAME "ros2 topic pub --once /emergency_stop/target_state waywiser_twist_safety/msg/EmergencyStopState \"{sender_id : 'command_line' , state : 1}\"" C-m
+
+  tmux send-keys -t $SESSION_NAME "ros2 launch waywiser teleop_rviz2.launch.py use_sim_time:=true rviz_config:=./waywiser/src/WayWiseR/waywiser_rviz2/rviz/map_reference_frame_carla.rviz" C-m
   tmux attach-session -t carla_sunrise 
 
 else

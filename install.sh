@@ -19,7 +19,7 @@ cd ../
 rosdep install -i --from-path src --rosdistro humble -r -y
 pip3 install -r src/carla-ros-bridge/requirements.txt
 colcon build --symlink-install --packages-skip rviz_carla_plugin carla_ad_demo pcl_recorder
-source ./install/setup.zsh
+source ./install/setup.sh
 cd ..
 # waywiser
 #
