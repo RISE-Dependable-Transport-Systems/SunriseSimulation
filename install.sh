@@ -1,6 +1,6 @@
 sudo apt update && sudo apt install -y tmux qtcreator qtbase5-dev libqt5serialport5-dev qtmultimedia5-dev libqt5gamepad5-dev libunwind-dev libqt5serialport5-dev git build-essential cmake python3-colcon-common-extensions
 mkdir ../Sunrise
-cp ./setup.sh ../Sunrise/
+cp ./run.sh ../Sunrise/
 cp *.patch ../Sunrise/
 cd ../Sunrise
 
